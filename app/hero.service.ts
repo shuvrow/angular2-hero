@@ -9,8 +9,8 @@ import { HEROES } from './mock-heroes';
 
 export class HeroService{
     //stub
-    getHeroes():Hero[]{
-        return HEROES;
+    getHeroes():Promise<Hero[]>{
+        return Promise.resolve(HEROES);
     }
 
     //heroService = new HeroService(); // this is a bad idea
